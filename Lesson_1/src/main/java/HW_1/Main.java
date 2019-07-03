@@ -28,27 +28,19 @@ public class Main {
         copyElements(allInt, allNumb);
     }
 
-    ;
-
     public static void printNumber(Number number) {
         System.out.println(number);
     }
 
-    ;
-
     public static <T extends Number> boolean compareTwoBoxes(AppleBox<T> box1, OrangeBox<T> box2) {
         return true;
     }
-
-    ;
 
     public static <T> void copyElements(ArrayList<? extends T> src, ArrayList<T> dst) {
         for (int i = 0; i < src.size(); i++) {
             dst.add(src.get(i));
         }
     }
-
-    ;
 
     public static double calcAvg(ArrayList<? extends Number> allNumb) {
         double d = 0.0;
@@ -57,23 +49,6 @@ public class Main {
         }
         d /= allNumb.size();
         return d;
-    }
-
-    ;
-
-    interface Apple {
-    }
-
-    interface Orange {
-    }
-
-    class Fruit {
-    }
-
-    class Box {
-    }
-
-    class GenClass<T extends Apple & Orange> {
     }
 
 }

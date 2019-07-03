@@ -3,6 +3,7 @@ package HW_1;
 import java.util.ArrayList;
 
 public class OrangeBox<OrangeBox extends Number> {
+
     ArrayList<Double> orangeBox = new ArrayList<Double>();
 
     OrangeBox[] obj;

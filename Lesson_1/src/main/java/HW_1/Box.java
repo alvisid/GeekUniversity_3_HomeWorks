@@ -19,5 +19,6 @@ public class Box {
     public void info() {
         System.out.println("Class: " + obj.getClass().getName());
         System.out.println("Object: " + obj);
+
     }
 }

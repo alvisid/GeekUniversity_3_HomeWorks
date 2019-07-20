@@ -13,9 +13,11 @@ public class AppleBox<AppleBox extends Number> {
 
     public double getWeight() {
         double Apple = 1.0f;
+
         for (int i = 0; i < obj.length; i++) {
             Apple += obj[i].doubleValue();
         }
+
         Apple /= obj.length;
         return Apple;
     }

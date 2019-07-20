@@ -10,6 +10,7 @@ import java.util.List;
 
 public class work2 {
     public static void main(String[] args) {
+
         String[] arrays = {"1", "2", "3", "4", "5"};
 
         List<String> listofString = new ArrayList<String>();

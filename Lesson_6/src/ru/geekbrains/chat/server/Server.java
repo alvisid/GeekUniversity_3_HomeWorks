@@ -1,6 +1,9 @@
 package ru.geekbrains.chat.server;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.geekbrains.chat.AuthException;
+import ru.geekbrains.chat.client.Controller;
 import ru.geekbrains.chat.server.persistance.UserRepository;
 import ru.geekbrains.chat.server.persistance.UserRepositoryImpl;
 import ru.geekbrains.chat.server.service.auth.AuthJDBCServiceImpl;
@@ -19,6 +22,9 @@ import java.util.Map;
 import static ru.geekbrains.chat.MessagesPatterns.*;
 
 public class Server {
+
+    private static final Logger servLogger = LogManager.getLogger(Server.class);
+
 
     public Server(Connection connection) {
         UserRepository<User, String> repository = new UserRepositoryImpl(connection);
@@ -79,6 +85,7 @@ public class Server {
 
         } catch (IOException e) {
             e.printStackTrace();
+            servLogger.error(e);
         }
     }
 
